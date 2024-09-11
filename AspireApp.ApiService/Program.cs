@@ -2,6 +2,7 @@ using AspireApp.Common;
 using AspireApp.Common.Data;
 using AspireApp.ServiceDefaults;
 using AspireApp.Data.Postgres.Extensions;
+using Dapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,9 +37,17 @@ app.MapPost("/employees", async (string name, IEmployeeRepo repo) =>
     return Results.Created($"/employees/{empl.Id}", empl);
 }).WithOpenApi();
 
-app.MapGet("/employees", async (IEmployeeRepo repo) =>
+app.MapGet("/employees", async (ISqlConnectionFactory sqlFactory) =>
 {
-    return Results.Ok(await repo.GetEmployeesAsync(1000, 1));
+    using var connection = sqlFactory.CreateConnection();
+    const string sql = """
+            select * from "Employees" order by "Name"
+            """;
+
+    var empls = await connection.QueryAsync<Employee>(
+        sql);
+    return Results.Ok(empls);
+
 }).WithOpenApi();
 
 app.MapDefaultEndpoints();
