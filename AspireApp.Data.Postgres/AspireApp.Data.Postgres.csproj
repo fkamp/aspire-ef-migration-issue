@@ -10,6 +10,7 @@
     <PackageReference Include="Aspire.Npgsql" Version="8.2.0" />
     <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.2.0" />
     <PackageReference Include="Dapper" Version="2.1.35" />
+    <PackageReference Include="Moq.Dapper" Version="1.0.7" />
   </ItemGroup>
 
   <ItemGroup>

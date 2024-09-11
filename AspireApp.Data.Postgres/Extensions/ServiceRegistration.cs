@@ -1,5 +1,4 @@
 ﻿using AspireApp.Common.Data;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -16,9 +15,23 @@ public static class ServiceRegistration
 
         services.AddScoped<IEmployeeRepo, EmployeeRepo>();
 
-        //dapper
+
+        //for dapper
+        //*************************************************************************************
+        /*
+
+        ef migration 
+            cd AspireApp.ApiService
+            dotnet ef migrations add init -p ..\AspireApp.Data.Postgres\
+        wont work with following two lines
+        */
         builder.AddNpgsqlDataSource("employee-db");
         services.AddScoped<ISqlConnectionFactory, SqlConnectionFactory>();
+
+        //use this instead; allows ef migration to work and app to start
+        //actual query that uses this factory wont work.
+        //services.AddScoped<ISqlConnectionFactory>(x => new MockSqlConnectionFactory());
+        //*************************************************************************************
 
 
         return builder;
