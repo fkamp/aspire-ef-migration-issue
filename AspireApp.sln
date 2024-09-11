@@ -2,17 +2,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireApp.AppHost", "AspireApp.AppHost\AspireApp.AppHost.csproj", "{E56EEDF5-F777-440F-9A45-1A78B9D689D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.AppHost", "AspireApp.AppHost\AspireApp.AppHost.csproj", "{E56EEDF5-F777-440F-9A45-1A78B9D689D0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.ServiceDefaults", "AspireApp.ServiceDefaults\AspireApp.ServiceDefaults.csproj", "{C911B931-60A9-4F8C-9953-0F58C50FADB1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.ApiService", "AspireApp.ApiService\AspireApp.ApiService.csproj", "{731D1C07-9A59-45C4-82C4-F964A0516278}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.Web", "AspireApp.Web\AspireApp.Web.csproj", "{5275391A-C105-49B1-A67A-AA5BB83CC047}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.Data.Postgres", "AspireApp.Data.Postgres\AspireApp.Data.Postgres.csproj", "{245AB9A8-4132-4F37-AA5F-D0222A173619}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireApp.Data.Postgres", "AspireApp.Data.Postgres\AspireApp.Data.Postgres.csproj", "{245AB9A8-4132-4F37-AA5F-D0222A173619}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireApp.Common", "AspireApp.Common\AspireApp.Common.csproj", "{E7F1ABB4-C722-4FC5-AE55-0468C65ED8D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.Common", "AspireApp.Common\AspireApp.Common.csproj", "{E7F1ABB4-C722-4FC5-AE55-0468C65ED8D8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireApp.Service.DatabaseMigration", "AspireApp.Service.DatabaseMigration\AspireApp.Service.DatabaseMigration.csproj", "{24D11628-8F52-4E5F-974B-8E73FB5E9DA9}"
 EndProject
@@ -34,10 +32,6 @@ Global
 		{731D1C07-9A59-45C4-82C4-F964A0516278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{731D1C07-9A59-45C4-82C4-F964A0516278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{731D1C07-9A59-45C4-82C4-F964A0516278}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5275391A-C105-49B1-A67A-AA5BB83CC047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5275391A-C105-49B1-A67A-AA5BB83CC047}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5275391A-C105-49B1-A67A-AA5BB83CC047}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5275391A-C105-49B1-A67A-AA5BB83CC047}.Release|Any CPU.Build.0 = Release|Any CPU
 		{245AB9A8-4132-4F37-AA5F-D0222A173619}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{245AB9A8-4132-4F37-AA5F-D0222A173619}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{245AB9A8-4132-4F37-AA5F-D0222A173619}.Release|Any CPU.ActiveCfg = Release|Any CPU
