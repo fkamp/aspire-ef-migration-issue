@@ -19,9 +19,4 @@ public static class ServiceNames
         public const string NAME = "employee-db";
 
     }
-
-    public const string MIGRATION = "database-migration";
-
-    public const string OUTPUTCACHE = "outputcache";
-
 }

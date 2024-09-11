@@ -19,7 +19,7 @@ Unable to create a 'DbContext' of type ''. The exception 'ConnectionString is mi
 `AspireApp.Data.Postgres.Extensions.ServiceRegistration` the EF Migration will go through without any issue.
 
 ```csharp
-//builder.AddNpgsqlDataSource("employee-db");
+//builder.AddNpgsqlDataSource(ServiceNames.DATABASE_EMPLS.NAME);
 //services.AddScoped<ISqlConnectionFactory, SqlConnectionFactory>();
 
 services.AddScoped<ISqlConnectionFactory>(x => new MockSqlConnectionFactory());

@@ -1,4 +1,5 @@
-﻿using AspireApp.Common.Data;
+﻿using AspireApp.Common;
+using AspireApp.Common.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -11,7 +12,7 @@ public static class ServiceRegistration
         var services = builder.Services;
 
         //ef core
-        builder.AddNpgsqlDbContext<ApplicationDbContext>("employee-db");
+        builder.AddNpgsqlDbContext<ApplicationDbContext>(ServiceNames.DATABASE_EMPLS.NAME);
 
         services.AddScoped<IEmployeeRepo, EmployeeRepo>();
 
@@ -25,7 +26,7 @@ public static class ServiceRegistration
             dotnet ef migrations add init -p ..\AspireApp.Data.Postgres\
         wont work with following two lines
         */
-        builder.AddNpgsqlDataSource("employee-db");
+        builder.AddNpgsqlDataSource(ServiceNames.DATABASE_EMPLS.NAME);
         services.AddScoped<ISqlConnectionFactory, SqlConnectionFactory>();
 
         //use this instead; allows ef migration to work and app to start
